@@ -1,7 +1,7 @@
 ################ Definitions ################
 
-export TEST_DOMAIN = badssl.test
-export PROD_DOMAIN = badssl.com
+export TEST_DOMAIN = badssl.nexploit.app
+export PROD_DOMAIN = badssl.nexploit.app
 
 ################ Main ################
 
@@ -33,7 +33,7 @@ jekyll-prod:
 
 .PHONY: certs-test
 certs-test:
-	cd certs && make test O=sets/test D=badssl.test
+	cd certs && make test O=sets/test D=badssl.nexploit.app
 	cd certs/sets && rm -rf current && cp -R test current
 
 	rm -rf common/certs/*.crt

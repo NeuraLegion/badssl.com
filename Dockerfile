@@ -13,7 +13,8 @@ RUN apt-get update && apt-get install -y \
     nginx \
     ruby2.4 \
     ruby2.4-dev
-RUN gem update --system
+
+RUN gem update --system 3.3.26  # Last version supporting Ruby 2.4
 RUN gem install jekyll
 
 # Install badssl.com
